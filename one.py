@@ -242,6 +242,6 @@ class One(ModuleType):
 this = One()
 
 if __name__ == '__main__':
-  print(this, this.__doc__)
+  print(this)
 else:
   sys.modules[__name__] = this

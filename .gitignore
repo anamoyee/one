@@ -1,0 +1,9 @@
+# Ignore everything
+*
+
+# Except for these files
+!one.py
+!requirements.txt
+!reset.py
+!README.md
+!.gitignore
