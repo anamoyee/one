@@ -239,6 +239,12 @@ class One(ModuleType):
       raise TypeError(f"unsupported operand type(s) for |: {type(self)!r} and {type(other)!r}")
     return One(val | self.value)
 
+  def __int__(self: Self) -> int:
+    return int(self.value)
+
+  def __float__(self: Self) -> float:
+    return float(self.value)
+
 this = One()
 
 if __name__ == '__main__':
