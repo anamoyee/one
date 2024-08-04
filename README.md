@@ -4,11 +4,11 @@
 ```py
 >>> import one
 >>> one + one
->>> <module 'two.py'>
+<module 'two.py'>
 >>> import two
 >>> (one + two) ** two
->>> <module 'nine.py'>
+<module 'nine.py'>
 >>> import math
 >>> one * math.pi
->>> <module 'pi.py'>
+<module 'pi.py'>
 ```
