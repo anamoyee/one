@@ -127,12 +127,12 @@ class One(ModuleType):
 	def __floordiv__(self: One, other: One) -> One:
 		if (val := self.get_actual_value(other)) is None:
 			raise TypeError(f"unsupported operand type(s) for //: {type(self)!r} and {type(other)!r}")
-		return One(self.value // val)
+		return One(int(self.value // val))
 
 	def __rfloordiv__(self: One, other: One) -> One:
 		if (val := self.get_actual_value(other)) is None:
 			raise TypeError(f"unsupported operand type(s) for //: {type(other)!r} and {type(self)!r}")
-		return One(val // self.value)
+		return One(int(val // self.value))
 
 	def __mod__(self: One, other: One) -> One:
 		if (val := self.get_actual_value(other)) is None:
