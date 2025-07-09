@@ -43,8 +43,12 @@ class One(ModuleType):
 		if _VALUE is None:
 			_VALUE = VALUE
 
-		name = str(int_to_filename(_VALUE))
-		doc = str(eng.number_to_words(_VALUE))
+		try:
+			name = str(int_to_filename(_VALUE))
+			doc = str(eng.number_to_words(_VALUE))
+		except (inflect.NumOutOfRangeError, IndexError):
+			raise RuntimeError("Who even needs this long of a number? Not reading allat 💀") from None
+
 		self = ModuleType.__new__(cls, name, doc)
 		self.name = name
 		self.doc = doc
@@ -66,7 +70,10 @@ class One(ModuleType):
 			my_classname = One.__name__
 			text = text.replace(my_classname, filename_to_classname(name))
 
-			path.write_text(text, encoding="utf-8")
+			try:
+				path.write_text(text, encoding="utf-8")
+			except OSError:
+				raise RuntimeError("Who even needs this long of a number? Not reading allat 💀") from None
 
 		if is_root:
 			return self
