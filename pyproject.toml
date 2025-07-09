@@ -27,6 +27,11 @@ classifiers = [
 	"Operating System :: Microsoft :: MS-DOS",
 ]
 
+[tool.uv]
+dev-dependencies = [
+	"toml>=0.10.2",
+]
+
 [project.urls]
 "Documentation" = "https://xkcd.com/730/" # :trollface:
 "Source (GitHub)" = "https://github.com/anamoyee/one"
