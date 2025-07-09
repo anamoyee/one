@@ -27,6 +27,11 @@ classifiers = [
 	"Operating System :: Microsoft :: MS-DOS",
 ]
 
+[project.urls]
+"Documentation" = "https://xkcd.com/730/" # :trollface:
+"Source (GitHub)" = "https://github.com/anamoyee/one"
+
+
 [tool.hatch.build.targets.wheel]
 packages = ["src/one"]
 
