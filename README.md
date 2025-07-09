@@ -15,5 +15,5 @@
 
 Now as a `pip` installable package!
 ```
-pip install one-py
+pip install one-dot-py
 ```

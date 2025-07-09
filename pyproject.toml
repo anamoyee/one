@@ -1,5 +1,5 @@
 [project]
-name = "one-py"
+name = "one-dot-py"
 dynamic = ["version"]
 description = "Add your description here"
 readme = "README.md"
