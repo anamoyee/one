@@ -9,8 +9,8 @@
 >>> (one + two) ** two
 <module 'nine.py'>
 >>> import math
->>> one * math.pi
-<module 'pi.py'>
+>>> two * math.pi
+<module 'tau.py'>
 ```
 
 Now as a `pip` installable package!
